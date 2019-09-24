@@ -12,6 +12,7 @@ function loadEventListeners() {
 
 function openMenu(e) {
   e.preventDefault();
+  console.log("hellow");
   homePage.style.display = "none";
   menu.style.display = "block";
 }

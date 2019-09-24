@@ -44,6 +44,8 @@ $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
+$custom:    #d9eeec !default;
+$custom-primary:    #3c70a4 !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -61,12 +63,15 @@ $colors: map-merge(
     "cyan":       $cyan,
     "white":      $white,
     "gray":       $gray-600,
-    "gray-dark":  $gray-800
+    "gray-dark":  $gray-800,
+    "custom":     $custom,
+    "custom-primary":     $custom-primary,
   ),
   $colors
 );
 
 $primary:       $blue !default;
+$primary-second:       $custom-primary !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -161,7 +166,7 @@ $sizes: map-merge(
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white !default;
+$body-bg:                   $custom !default;
 $body-color:                $gray-900 !default;
 
 

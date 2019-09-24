@@ -19,6 +19,8 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
+  --custom: #d9eeec;
+  --custom-primary: #3c70a4;
   --primary: #007bff;
   --secondary: #6c757d;
   --success: #28a745;
@@ -62,7 +64,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: #d9eeec;
 }
 
 [tabindex="-1"]:focus {
@@ -486,7 +488,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #fff;
+  background-color: #d9eeec;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   max-width: 100%;
@@ -4135,16 +4137,16 @@ input[type="button"].btn-block {
 }
 
 .custom-range:focus::-webkit-slider-thumb {
-  -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-          box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  -webkit-box-shadow: 0 0 0 1px #d9eeec, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          box-shadow: 0 0 0 1px #d9eeec, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .custom-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 1px #d9eeec, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .custom-range:focus::-ms-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 1px #d9eeec, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .custom-range::-moz-focus-outer {
@@ -4361,8 +4363,8 @@ input[type="button"].btn-block {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
-  background-color: #fff;
-  border-color: #dee2e6 #dee2e6 #fff;
+  background-color: #d9eeec;
+  border-color: #dee2e6 #dee2e6 #d9eeec;
 }
 
 .nav-tabs .dropdown-menu {
@@ -10589,21 +10591,35 @@ nav {
 
 nav span {
   font-size: 2rem;
+  font-weight: 200;
 }
 
 nav .logo {
-  font-weight: 100;
+  font-weight: 200;
 }
 
-nav #img-menu:hover img {
+nav .btn-menu {
+  background-image: url(/img/menu.svg);
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
 }
 
 .showcase {
-  margin-top: 120px;
-  height: auto;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .showcase #caption {
@@ -10612,7 +10628,7 @@ nav #img-menu:hover img {
 }
 
 .showcase #caption h1 {
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .showcase #caption h3 {
@@ -10620,36 +10636,37 @@ nav #img-menu:hover img {
 }
 
 .showcase #caption button {
-  margin: 10px;
+  margin: 20px 0;
 }
 
-.showcase #caption img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 350px;
-  height: 350px;
-  padding: 1rem 0.5rem;
+.showcase #caption .btn-primary {
+  background-color: #3c70a4;
+}
+
+.showcase .img-showcase {
+  padding: 2rem 2rem;
+  width: 250px;
+  height: 250px;
 }
 
 @media (min-width: 992px) {
   .showcase {
-    margin-top: 80px;
-    margin-left: auto;
-    margin-right: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .showcase #caption {
+    margin: 0 30px;
   }
   .showcase h1 {
     font-size: 3rem;
@@ -10658,9 +10675,11 @@ nav #img-menu:hover img {
   .showcase h3 {
     font-weight: 100;
   }
-  .showcase img {
-    width: 450px;
-    height: 450px;
+  .showcase .img {
+    padding: 2rem 2rem;
+    width: 350px;
+    height: 350px;
+    margin: 0 30px;
   }
 }
 
@@ -10687,6 +10706,9 @@ nav #img-menu:hover img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -10700,5 +10722,6 @@ nav #img-menu:hover img {
   text-decoration: none;
   color: #000;
   font-size: 3rem;
+  font-weight: 300;
 }
 /*# sourceMappingURL=style.css.map */

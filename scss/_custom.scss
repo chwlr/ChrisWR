@@ -8,30 +8,35 @@ nav {
 
   span {
     font-size: $font-size-base * 2;
+    font-weight: 200;
   }
 
   .logo {
-    font-weight: 100;
+    font-weight: 200;
   }
 
-  #img-menu:hover {
-    img {
-      cursor: pointer;
-      transform: rotate(45deg);
-    }
+  .btn-menu {
+    background-image: url(/img/menu.svg);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
   }
 }
 
 .showcase {
-  margin-top: 120px;
-  height: auto;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   #caption {
     text-align: center;
     padding: 10px;
 
+
     h1 {
-      font-weight: 300;
+      font-weight: 200;
     }
 
     h3 {
@@ -39,30 +44,32 @@ nav {
     }
 
     button {
-      margin: 10px;
+      margin: 20px 0;
     }
 
-    img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 350px;
-      height: 350px;
-      padding: 1rem 0.5rem;
+    .btn-primary {
+      background-color: $custom-primary;
     }
+  }
+
+  .img-showcase {
+    padding: 2rem 2rem;
+    width: 250px;
+    height: 250px;
   }
 }
 
 
 @media (min-width: 992px) {
   .showcase {
-    margin-top: 80px;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
-    justify-content: center;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
+
+    #caption {
+      margin: 0 30px;
+    }
 
     h1 {
       font-size: $font-size-base * 3;
@@ -73,9 +80,11 @@ nav {
       font-weight: 100;
     }
 
-    img {
-      width: 450px;
-      height: 450px;
+    .img {
+      padding: 2rem 2rem;
+      width: 350px;
+      height: 350px;
+      margin: 0 30px;
     }
   }
 }
@@ -96,6 +105,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 0;
     padding: 0;
 
@@ -107,6 +117,7 @@ nav {
         text-decoration: none;
         color: $black;
         font-size: $font-size-base * 3;
+        font-weight: 300;
       }
     }
   }
