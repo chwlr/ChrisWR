@@ -10666,7 +10666,7 @@ nav .btn-menu:hover .bar3 {
   font-weight: 200;
 }
 
-.showcase #caption h3 {
+.showcase #caption h2 {
   font-weight: 100;
 }
 
@@ -10693,22 +10693,31 @@ nav .btn-menu:hover .bar3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   .showcase #caption {
     margin: 0 30px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .showcase h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 300;
   }
-  .showcase h3 {
+  .showcase h2 {
     font-weight: 100;
+  }
+  .showcase .bar {
+    width: 1px;
+    height: 200px;
+    background-color: #333;
+    margin: 0 10px;
   }
   .showcase .img {
     padding: 2rem 2rem;
