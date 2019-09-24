@@ -10599,10 +10599,45 @@ nav .logo {
 }
 
 nav .btn-menu {
-  background-image: url(/img/menu.svg);
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+nav .btn-menu .bar1 {
+  width: 30px;
+  height: 1px;
+  background-color: #333;
+  margin: 1px 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  text-align: right;
+  float: right;
+}
+
+nav .btn-menu .bar2 {
+  width: 20px;
+  height: 1px;
+  background-color: #333;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  float: right;
+  margin: 6px 0;
+}
+
+nav .btn-menu .bar3 {
+  width: 15px;
+  height: 1px;
+  background-color: #333;
+  margin: 1px 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  float: right;
+}
+
+nav .btn-menu:hover .bar2,
+nav .btn-menu:hover .bar3 {
+  width: 30px;
 }
 
 .showcase {
@@ -10689,6 +10724,9 @@ nav .btn-menu {
 
 .btn-close {
   cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin-top: -10px;
 }
 
 .menu-item {
