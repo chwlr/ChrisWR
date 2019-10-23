@@ -76,15 +76,9 @@ nav {
 
     h2 {
       font-weight: 100;
+      margin-bottom: 20px;
     }
 
-    button {
-      margin: 20px 0;
-    }
-
-    .btn-primary {
-      background-color: $custom-primary;
-    }
   }
 
   .img-showcase {
@@ -167,5 +161,26 @@ nav {
         font-weight: 200;
       }
     }
+  }
+}
+
+.underline-from-center {
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    background: #2980b9;
+    height: 4px;
+    transition-property: left right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover:before {
+    left: 0;
+    right: 0;
   }
 }
