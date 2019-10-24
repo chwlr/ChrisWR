@@ -81,11 +81,39 @@ nav {
 
   }
 
+  .wrapper-img {
+    position: relative;
+  }
+
   .img-showcase {
     padding: 2rem 2rem;
     width: 250px;
     height: 250px;
   }
+
+  .eye-left {
+    top: 58%;
+    left: 33%;
+    right: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #000000;
+    position: absolute;
+  }
+
+  .eye-right {
+    top: 58%;
+    left: 57%;
+    right: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #000000;
+    position: absolute;
+  }
+
+
 }
 
 

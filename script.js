@@ -21,3 +21,12 @@ function closeMenu(e) {
   menu.style.display = "none";
   homePage.style.display = "block";
 }
+
+window.addEventListener("mousemove", e => {
+  let eyeLeft = document.querySelector(".eye-left");
+  let mouseX = eyeLeft.getBoundingClientRect().left;
+  let mouseY = eyeLeft.getBoundingClientRect().top;
+  let radianDegrees = Math.atan2(e.pageX - mouseX, e.pageY - mouseY);
+  let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 + 180;
+  eyeLeft.style.transform = `rotate(${rotationDegrees}deg)`;
+});

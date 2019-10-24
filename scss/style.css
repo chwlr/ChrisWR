@@ -8727,10 +8727,30 @@ nav {
     .showcase #caption h2 {
       font-weight: 100;
       margin-bottom: 20px; }
+  .showcase .wrapper-img {
+    position: relative; }
   .showcase .img-showcase {
     padding: 2rem 2rem;
     width: 250px;
     height: 250px; }
+  .showcase .eye-left {
+    top: 58%;
+    left: 33%;
+    right: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #000000;
+    position: absolute; }
+  .showcase .eye-right {
+    top: 58%;
+    left: 57%;
+    right: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #000000;
+    position: absolute; }
 
 @media (min-width: 992px) {
   .showcase {
